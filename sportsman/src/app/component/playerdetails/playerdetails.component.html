@@ -1,0 +1,18 @@
+<!-- <p>playerdetails works!</p>
+ -->
+
+ <h2>Player details</h2>
+<hr>
+<div *ngIf="player">
+  <div>
+    <label><b>Player Id: </b></label> {{player.playerId}}
+  </div>
+  <div>
+    <label><b>Player Name: </b></label> {{player.playerName}}
+  </div>
+  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Player List</button><br>

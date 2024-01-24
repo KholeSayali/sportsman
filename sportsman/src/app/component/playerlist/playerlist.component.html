@@ -1,0 +1,29 @@
+<p>playerlist works!</p>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Player List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Player-Id</th>
+            <th>Player-Name</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of players |  async" >
+            <td>{{p.playerId}}</td>
+            <td>{{p.playerName}}</td>
+            
+            <td><button (click)="deletePlayer(p.playerId)"  class="btn btn-danger">Delete</button>  </td>           
+           <button (click)="playerDetails(p.playerId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+           <button (click)="updateDetails(p.playerId)" class="btn btn-info" style="margin-left: 10px">Edit</button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
